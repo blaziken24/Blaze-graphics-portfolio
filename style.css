@@ -226,7 +226,80 @@ nav a {
   opacity: 0;
   transition: 0.4s;
 }
-
 .work-item:hover::after {
   opacity: 1;
+
+}
+@media (max-width: 1024px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    display: none; /* hide nav for small screens (simple version) */
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-right video,
+  .hero-right img {
+    margin-top: 40px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+  }
+
+  .reel-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .reel-card video {
+    width: 100%;
+  }
+
+  .about,
+  .contact {
+    padding: 100px 20px;
+  }
+
+  .about h2,
+  .contact h2 {
+    font-size: 32px;
+  }
+
+  .statement h2 {
+    font-size: 28px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
